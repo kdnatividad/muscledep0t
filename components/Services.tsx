@@ -36,9 +36,21 @@ const drukText: React.CSSProperties = {
 export default function Services() {
   return (
     <section
-      style={{ backgroundColor: "#0a0a0a" }}
+      style={{ backgroundColor: "#0a0a0a", position: "relative", overflow: "hidden" }}
       className="py-24 px-6 md:px-16"
     >
+      {/* Section background image */}
+      <Image
+        src="/6829.jpg"
+        alt=""
+        fill
+        className="object-cover object-center"
+        style={{ opacity: 0.15, zIndex: 0 }}
+      />
+      {/* Dark overlay */}
+      <div style={{ position: "absolute", inset: 0, backgroundColor: "rgba(0,0,0,0.92)", zIndex: 1 }} />
+      {/* Content wrapper */}
+      <div style={{ position: "relative", zIndex: 2 }}>
       {/* Header */}
       <div className="text-center mb-12">
         <p
@@ -49,7 +61,7 @@ export default function Services() {
         </p>
         <h2
           className="uppercase leading-tight"
-          style={{ ...drukText, fontSize: "clamp(36px, 5vw, 64px)" }}
+          style={{ ...drukText, fontSize: "70px" }}
         >
           <span className="block text-white">EVERYTHING YOU NEED TO</span>
           <span
@@ -86,33 +98,22 @@ export default function Services() {
               className="object-cover object-center transition-transform duration-300 group-hover:scale-105"
             />
 
-            {/* Default overlay */}
-            <div
-              className="absolute inset-0 transition-all duration-300 group-hover:opacity-0"
-              style={{ backgroundColor: "rgba(0,0,0,0.5)" }}
-            />
-
-            {/* Hover overlay */}
+            {/* Hover dark overlay */}
             <div
               className="absolute inset-0 opacity-0 transition-all duration-300 group-hover:opacity-100"
-              style={{ backgroundColor: "rgba(0,0,0,0.2)" }}
+              style={{ backgroundColor: "rgba(0,0,0,0.65)", zIndex: 1 }}
             />
 
-            {/* Hover label */}
-            <p
-              className="absolute top-3 left-3 text-xs uppercase opacity-0 group-hover:opacity-100 transition-all duration-300"
-              style={{ ...drukText, color: "#D85A30" }}
+            {/* Centered content — visible on hover only */}
+            <div
+              className="absolute inset-0 flex flex-col items-center justify-center gap-3 px-4 opacity-0 group-hover:opacity-100 transition-all duration-300"
+              style={{ zIndex: 2 }}
             >
-              VIEW SERVICE
-            </p>
-
-            {/* Bottom content */}
-            <div className="absolute bottom-0 left-0 right-0 flex flex-col items-center pb-6 px-4 gap-3">
               <img
                 src={card.icon}
                 alt={card.alt}
-                width={40}
-                height={40}
+                width={120}
+                height={120}
                 style={{ filter: "brightness(0) invert(1)" }}
               />
               <p
@@ -124,6 +125,7 @@ export default function Services() {
             </div>
           </div>
         ))}
+      </div>
       </div>
     </section>
   );
