@@ -102,7 +102,7 @@ export default function CollabSlider() {
             </h2>
 
             {/* Description */}
-            <p style={{ color: "rgba(255,255,255,0.7)", fontSize: "14px", lineHeight: 1.75, maxWidth: "520px", marginBottom: "32px" }}>
+            <p style={{ color: "rgba(255,255,255,0.7)", fontSize: "16px", lineHeight: 1.75, maxWidth: "520px", marginBottom: "32px" }}>
               The First Collaboration Between <strong style={{ color: "#fff" }}>Muscle Depot And Slowly But Surely</strong> Is Finally Here. Built For Those Who Show Up, Put In The Work, And Trust The Process — Slowly But Surely.
             </p>
 
@@ -110,7 +110,7 @@ export default function CollabSlider() {
             <a
               href="#"
               className="btn-glow"
-              style={{ ...drukText, display: "inline-block", backgroundColor: "#D85A30", color: "#fff", padding: "14px 36px", fontSize: "14px", textTransform: "uppercase", letterSpacing: "0.1em", borderRadius: "4px", textDecoration: "none" }}
+              style={{ ...drukText, display: "inline-block", backgroundColor: "#D85A30", color: "#fff", padding: "14px 36px", fontSize: "16px", textTransform: "uppercase", letterSpacing: "0.1em", borderRadius: "4px", textDecoration: "none" }}
             >
               BUY ONE NOW
             </a>

@@ -74,7 +74,7 @@ export default function Hero() {
         <p
           style={{
             color: "rgba(255,255,255,0.6)",
-            fontSize: "13px",
+            fontSize: "18px",
             letterSpacing: "0.1em",
             textTransform: "uppercase",
             maxWidth: "520px",
@@ -100,7 +100,7 @@ export default function Hero() {
               color: "#fff",
               padding: "14px 32px",
               fontFamily: "DrukText, sans-serif",
-              fontSize: "14px",
+              fontSize: "16px",
               textTransform: "uppercase",
               letterSpacing: "0.1em",
               borderRadius: "4px",
@@ -116,7 +116,7 @@ export default function Hero() {
               color: "#fff",
               padding: "14px 32px",
               fontFamily: "DrukText, sans-serif",
-              fontSize: "14px",
+              fontSize: "16px",
               textTransform: "uppercase",
               letterSpacing: "0.1em",
               borderRadius: "4px",

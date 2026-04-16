@@ -46,8 +46,8 @@ export default function Services() {
       {/* Header */}
       <div className="text-center mb-12">
         <p
-          className="text-sm uppercase tracking-widest mb-4"
-          style={{ ...drukText, color: "#D85A30" }}
+          className="uppercase tracking-widest mb-4"
+          style={{ ...drukText, color: "#D85A30", fontSize: "16px" }}
         >
           OUR SERVICES
         </p>

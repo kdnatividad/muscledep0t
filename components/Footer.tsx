@@ -45,10 +45,10 @@ export default function Footer() {
       </div>
 
       {/* Middle — columns + stay connected */}
-      <div style={{ maxWidth: "1600px", margin: "0 auto", borderBottom: "1px solid rgba(255,255,255,0.08)", display: "flex", flexWrap: "wrap" }}>
+      <div style={{ maxWidth: "1600px", margin: "0 auto", borderBottom: "1px solid rgba(255,255,255,0.08)" }} className="flex flex-col md:flex-row">
 
         {/* Link columns */}
-        <div style={{ flex: 1, minWidth: "280px", padding: "40px", display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "32px", borderRight: "1px solid rgba(255,255,255,0.08)" }}>
+        <div style={{ flex: 1, padding: "40px", display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "32px" }} className="border-b border-white/8 md:border-b-0 md:border-r md:border-white/8">
 
           {/* About Us */}
           <div>
@@ -76,7 +76,7 @@ export default function Footer() {
         </div>
 
         {/* Stay Connected */}
-        <div style={{ width: "220px", padding: "40px", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "16px" }}>
+        <div style={{ padding: "40px", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "16px" }} className="w-full md:w-[220px]">
           <p style={{ ...drukText, color: "#fff", fontSize: "13px", textTransform: "uppercase", letterSpacing: "0.15em" }}>Stay Connected</p>
           <div style={{ display: "flex", gap: "10px" }}>
             {socials.map(({ src, label, href }) => (
@@ -90,10 +90,10 @@ export default function Footer() {
       </div>
 
       {/* Lower — get help + find us */}
-      <div style={{ maxWidth: "1600px", margin: "0 auto", borderBottom: "1px solid rgba(255,255,255,0.08)", display: "flex", flexWrap: "wrap" }}>
+      <div style={{ maxWidth: "1600px", margin: "0 auto", borderBottom: "1px solid rgba(255,255,255,0.08)" }} className="flex flex-col md:flex-row">
 
         {/* Get Help */}
-        <div style={{ flex: 1, minWidth: "280px", padding: "40px", borderRight: "1px solid rgba(255,255,255,0.08)" }}>
+        <div style={{ flex: 1, padding: "40px" }} className="border-b border-white/8 md:border-b-0 md:border-r md:border-white/8">
           <p style={colHeading}>Get Help</p>
           <p style={{ color: "rgba(255,255,255,0.55)", fontSize: "13px", lineHeight: 1.8 }}>MuscleDepot Gym</p>
           <p style={{ color: "rgba(255,255,255,0.55)", fontSize: "13px", lineHeight: 1.8 }}>Del Rosario St, Tuguegarao City, Cagayan</p>

@@ -29,7 +29,7 @@ export default function About() {
         <div className="w-full md:w-1/2 flex flex-col gap-5">
           {/* Label */}
           <p
-            style={{ ...drukText, color: "#D85A30", fontSize: "14px", letterSpacing: "0.15em", textTransform: "uppercase" }}
+            style={{ ...drukText, color: "#D85A30", fontSize: "16px", letterSpacing: "0.15em", textTransform: "uppercase" }}
           >
             BUILT FOR REAL PROGRESS
           </p>
@@ -41,13 +41,13 @@ export default function About() {
           </h2>
 
           {/* Body */}
-          <p style={{ color: "#fff", fontSize: "15px", fontWeight: 600, lineHeight: 1.6 }}>
+          <p style={{ color: "#fff", fontSize: "16px", fontWeight: 600, lineHeight: 1.6 }}>
             MucleDep0t Is Built For People Who Want Real Change.
           </p>
-          <p style={{ color: "rgba(255,255,255,0.75)", fontSize: "14px", lineHeight: 1.75 }}>
+          <p style={{ color: "rgba(255,255,255,0.75)", fontSize: "16px", lineHeight: 1.75 }}>
             From Beginners To Experienced Lifters, We Focus On Helping You Stay Consistent And Improve Week By Week. Whether Your Goal Is To Gain Muscle, Lose Fat, Or Build Discipline — This Is Your Place.
           </p>
-          <p style={{ color: "rgba(255,255,255,0.75)", fontSize: "14px", lineHeight: 1.75 }}>
+          <p style={{ color: "rgba(255,255,255,0.75)", fontSize: "16px", lineHeight: 1.75 }}>
             We Don&apos;t Promise Overnight Results.<br />
             We Build Habits That Actually Last.
           </p>
@@ -63,7 +63,7 @@ export default function About() {
                 backgroundColor: "#D85A30",
                 color: "#fff",
                 padding: "14px 32px",
-                fontSize: "14px",
+                fontSize: "16px",
                 textTransform: "uppercase",
                 letterSpacing: "0.1em",
                 borderRadius: "4px",

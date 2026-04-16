@@ -73,13 +73,13 @@ function TrainerCard({ trainer }: { trainer: typeof trainers[0] }) {
 <p style={{ ...drukText, color: "#fff", fontSize: "26px", textTransform: "uppercase", lineHeight: 1.1, marginBottom: "10px" }}>
           {trainer.name}
         </p>
-        <p style={{ color: "rgba(255,255,255,0.8)", fontSize: "11px", lineHeight: 1.6, textTransform: "uppercase", letterSpacing: "0.03em", marginBottom: "14px" }}>
+        <p style={{ color: "rgba(255,255,255,0.8)", fontSize: "16px", lineHeight: 1.6, textTransform: "uppercase", letterSpacing: "0.03em", marginBottom: "14px" }}>
           {trainer.description}
         </p>
         <a
           href="#"
           className="btn-glow"
-          style={{ ...drukText, display: "inline-block", backgroundColor: "#D85A30", color: "#fff", padding: "10px 24px", fontSize: "12px", textTransform: "uppercase", letterSpacing: "0.1em", borderRadius: "4px", textDecoration: "none" }}
+          style={{ ...drukText, display: "inline-block", backgroundColor: "#D85A30", color: "#fff", padding: "10px 24px", fontSize: "16px", textTransform: "uppercase", letterSpacing: "0.1em", borderRadius: "4px", textDecoration: "none" }}
         >
           HIRE COACH
         </a>
