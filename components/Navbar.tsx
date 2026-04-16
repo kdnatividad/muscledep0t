@@ -59,7 +59,7 @@ export default function Navbar() {
               style={{ filter: "brightness(0) invert(1)" }}
             />
           </a>
-          <
+          <a
             href="#"
             className="flex items-center justify-center w-9 h-9 md:w-10 md:h-10 rounded-lg bg-[#D85A30] hover:bg-orange-700 transition-colors"
             aria-label="Instagram"
