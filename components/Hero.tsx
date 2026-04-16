@@ -49,18 +49,18 @@ export default function Hero() {
           NO SHORTCUTS. JUST HARD WORK, DISCIPLINE, AND CONSISTENCY.
         </p>
 
-        <div className="flex flex-row justify-center gap-3 w-full max-w-sm sm:max-w-none">
+        <div className="flex flex-row justify-center gap-3 w-full px-2 sm:px-0 sm:w-auto">
           <a
             href="#"
-            className="btn-glow flex-1 sm:flex-none text-center"
-            style={{ ...btnBase, backgroundColor: "#D85A30", color: "#fff", padding: "12px 32px" }}
+            className="btn-glow flex-1 sm:flex-none text-center px-6 py-3 sm:px-8"
+            style={{ ...btnBase, backgroundColor: "#D85A30", color: "#fff" }}
           >
             JOIN US NOW
           </a>
           <a
             href="#"
-            className="flex-1 sm:flex-none text-center"
-            style={{ ...btnBase, backgroundColor: "transparent", color: "#fff", padding: "12px 32px", border: "1px solid #fff" }}
+            className="flex-1 sm:flex-none text-center px-6 py-3 sm:px-8"
+            style={{ ...btnBase, backgroundColor: "transparent", color: "#fff", border: "1px solid #fff" }}
           >
             CONTACT US
           </a>
