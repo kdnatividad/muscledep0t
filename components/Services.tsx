@@ -36,19 +36,11 @@ const drukText: React.CSSProperties = {
 export default function Services() {
   return (
     <section
-      style={{ backgroundColor: "#000000", position: "relative", overflow: "hidden" }}
+      style={{ position: "relative", overflow: "hidden" }}
       className="py-24 px-6 md:px-16"
     >
-      {/* Section background image */}
-      <Image
-        src="/6829.jpg"
-        alt=""
-        fill
-        className="object-cover object-center"
-        style={{ opacity: 0.15, zIndex: 0 }}
-      />
-      {/* Dark overlay */}
-      <div style={{ position: "absolute", inset: 0, backgroundColor: "rgba(0,0,0,0.92)", zIndex: 1 }} />
+      <img src="/6829.jpg" alt="" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center", opacity: 0.3, zIndex: 0 }} />
+      <div style={{ position: "absolute", inset: 0, backgroundColor: "rgba(0,0,0,0.85)", zIndex: 1 }} />
       {/* Content wrapper */}
       <div style={{ position: "relative", zIndex: 2, maxWidth: "1600px", margin: "0 auto" }}>
       {/* Header */}

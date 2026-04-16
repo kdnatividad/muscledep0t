@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 
 const drukText: React.CSSProperties = {
@@ -32,27 +32,33 @@ const slides = [
 export default function CollabSlider() {
   const [current, setCurrent] = useState(0);
 
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % slides.length);
+    }, 3000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
-    <section style={{ backgroundColor: "#000", padding: "80px 40px" }}>
-      <div style={{ maxWidth: "1600px", margin: "0 auto" }}>
+    <section style={{ padding: "80px 40px", position: "relative", overflow: "hidden" }}>
+      <img src="/6829.jpg" alt="" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center", opacity: 0.3, zIndex: 0 }} />
+      <div style={{ position: "absolute", inset: 0, backgroundColor: "rgba(0,0,0,0.90)", zIndex: 1 }} />
+      <div style={{ maxWidth: "1600px", margin: "0 auto", position: "relative", zIndex: 2 }}>
         <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16">
 
           {/* Left — image slider */}
           <div style={{ flex: "0 0 auto", width: "100%", maxWidth: "480px" }}>
-            <div style={{ position: "relative", aspectRatio: "4/5", borderRadius: "16px", overflow: "hidden", border: "2px solid #D85A30" }}>
-              <Image
-                key={current}
-                src={slides[current].image}
-                alt={`Slide ${current + 1}`}
-                fill
-                className="object-cover object-center"
-                priority
-              />
-              {/* Anniversary Collection label */}
-              <div style={{ position: "absolute", top: "20px", left: "20px", zIndex: 2 }}>
-                <p style={{ ...drukText, color: "#D85A30", fontSize: "clamp(24px, 4vw, 36px)", textTransform: "uppercase", lineHeight: 1.05, textShadow: "0 2px 8px rgba(0,0,0,0.8)" }}>
-                  1st<br />Anniversary<br />Collection
-                </p>
+            <div style={{ border: "2px solid #D85A30", borderRadius: "16px", padding: "10px" }}>
+              <div style={{ position: "relative", aspectRatio: "1/1", borderRadius: "10px", overflow: "hidden" }}>
+                <Image
+                  key={current}
+                  src={slides[current].image}
+                  alt={`Slide ${current + 1}`}
+                  fill
+                  className="object-cover object-center"
+                  priority
+                  style={{ animation: "fade-in 0.5s ease forwards" }}
+                />
               </div>
             </div>
 
@@ -81,10 +87,8 @@ export default function CollabSlider() {
           {/* Right — content */}
           <div style={{ flex: 1 }}>
             {/* Collab line */}
-            <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "16px" }}>
-              <Image src="/md-orange.png" alt="MuscleDepot" width={32} height={32} style={{ width: "32px", height: "auto" }} />
-              <span style={{ color: "rgba(255,255,255,0.6)", fontSize: "14px", letterSpacing: "0.05em" }}>×</span>
-              <Image src="/slwly/MDSW 1.png" alt="Slowly" width={80} height={28} style={{ width: "80px", height: "auto", objectFit: "contain" }} />
+            <div style={{ marginBottom: "16px" }}>
+              <Image src="/slwly/MDSW 1.png" alt="MuscleDepot x Slowly" width={160} height={40} style={{ width: "160px", height: "auto", objectFit: "contain" }} />
             </div>
 
             {/* Heading */}

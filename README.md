@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# MUSCLEDEP0T
+
+> **Everything Starts From Zero.**
+
+Official website for **MuscleDepot** — your local training ground for real progress. No shortcuts. Just hard work, discipline, and consistency.
+
+---
+
+## Stack
+
+- **Framework** — Next.js 16 (App Router)
+- **Styling** — Tailwind CSS v4
+- **Font** — Druk Wide / DrukText (local)
+- **Language** — TypeScript
+
+---
+
+## Sections
+
+| Section | Description |
+|---|---|
+| `Navbar` | Sticky nav with social links and mobile hamburger menu |
+| `Hero` | Full-screen video background with CTA |
+| `MarqueeBanner` | Scrolling orange ticker banner |
+| `Services` | 4-card services grid with hover effects |
+| `About` | Split layout about section |
+| `Trainers` | Coach cards with hover reveal |
+| `CollabSlider` | MuscleDepot × Slowly collab image slider |
+| `Footer` | Full footer with links, hours, map, and socials |
+
+---
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Socials
 
-## Learn More
+- Instagram — [@muscledep0t](https://www.instagram.com/muscledep0t/)
+- Facebook — [muscledep0t](https://www.facebook.com/muscledep0t)
+- TikTok — [@muscledep0t](https://www.tiktok.com/@muscledep0t)
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Location
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Del Rosario St, Tuguegarao City, Cagayan
+**0917 160 6725** · muscledep0t.ph@gmail.com
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+*Built by Grit.*
