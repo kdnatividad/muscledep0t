@@ -1,128 +1,65 @@
+const drukText: React.CSSProperties = {
+  fontFamily: "var(--font-druktext), sans-serif",
+  fontWeight: 500,
+};
+
+const btnBase: React.CSSProperties = {
+  ...drukText,
+  fontSize: "16px",
+  textTransform: "uppercase",
+  letterSpacing: "0.1em",
+  borderRadius: "4px",
+  textDecoration: "none",
+};
+
 export default function Hero() {
   return (
-    <section
-      style={{
-        position: "relative",
-        width: "100%",
-        height: "85vh",
-        overflow: "hidden",
-        backgroundColor: "#000",
-      }}
-    >
+    <section className="relative w-full overflow-hidden bg-black" style={{ height: "85vh" }}>
       <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        style={{
-          position: "absolute",
-          top: "0",
-          left: "0",
-          width: "100%",
-          height: "100%",
-          objectFit: "cover",
-          zIndex: "0",
-          opacity: "0.3",
-        }}
+        autoPlay muted loop playsInline
+        className="absolute inset-0 w-full h-full object-cover opacity-30"
+        style={{ zIndex: 0 }}
       >
         <source src="/muscledepot-hero.mp4" type="video/mp4" />
       </video>
 
       <div
-        style={{
-          position: "absolute",
-          top: "0",
-          left: "0",
-          width: "100%",
-          height: "100%",
-          zIndex: "1",
-          background:
-            "linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.95) 100%)",
-        }}
+        className="absolute inset-0"
+        style={{ zIndex: 1, background: "linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.95) 100%)" }}
       />
 
       <div
-        style={{
-          position: "relative",
-          zIndex: "2",
-          height: "100%",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          maxWidth: "1600px",
-          margin: "0 auto",
-          width: "100%",
-          textAlign: "center",
-          padding: "0 24px",
-        }}
+        className="relative h-full flex flex-col items-center justify-center text-center px-6 mx-auto w-full"
+        style={{ zIndex: 2, maxWidth: "1600px" }}
       >
         <h1
-          style={{
-            fontFamily: "DrukText, sans-serif",
-            fontSize: "clamp(40px, 6vw, 80px)",
-            color: "#fff",
-            textTransform: "uppercase",
-            lineHeight: 1.1,
-            margin: "0 0 24px",
-          }}
+          className="uppercase mb-6"
+          style={{ ...drukText, fontSize: "clamp(40px, 6vw, 80px)", color: "#fff", lineHeight: 1.1 }}
         >
           EVERYTHING STARTS
           <br />
           FROM <span style={{ color: "#D85A30" }}>ZERO</span>
         </h1>
+
         <p
-          style={{
-            color: "rgba(255,255,255,0.6)",
-            fontSize: "18px",
-            letterSpacing: "0.1em",
-            textTransform: "uppercase",
-            maxWidth: "520px",
-            marginBottom: "32px",
-          }}
+          className="mb-8 leading-relaxed"
+          style={{ color: "rgba(255,255,255,0.6)", fontSize: "18px", letterSpacing: "0.1em", textTransform: "uppercase", maxWidth: "520px" }}
         >
           WELCOME TO MUSCLEDEP0T — YOUR LOCAL TRAINING GROUND FOR REAL PROGRESS.
           NO SHORTCUTS. JUST HARD WORK, DISCIPLINE, AND CONSISTENCY.
         </p>
-        <div
-          style={{
-            display: "flex",
-            gap: "16px",
-            flexWrap: "wrap",
-            justifyContent: "center",
-          }}
-        >
+
+        <div className="flex flex-wrap justify-center gap-4">
           <a
             href="#"
             className="btn-glow"
-            style={{
-              backgroundColor: "#D85A30",
-              color: "#fff",
-              padding: "14px 32px",
-              fontFamily: "DrukText, sans-serif",
-              fontSize: "16px",
-              textTransform: "uppercase",
-              letterSpacing: "0.1em",
-              borderRadius: "4px",
-              textDecoration: "none",
-            }}
+            style={{ ...btnBase, backgroundColor: "#D85A30", color: "#fff", padding: "12px 32px" }}
           >
             JOIN US NOW
           </a>
           <a
             href="#"
-            style={{
-              backgroundColor: "transparent",
-              color: "#fff",
-              padding: "14px 32px",
-              fontFamily: "DrukText, sans-serif",
-              fontSize: "16px",
-              textTransform: "uppercase",
-              letterSpacing: "0.1em",
-              borderRadius: "4px",
-              border: "1px solid #fff",
-              textDecoration: "none",
-            }}
+            style={{ ...btnBase, backgroundColor: "transparent", color: "#fff", padding: "12px 32px", border: "1px solid #fff" }}
           >
             CONTACT US
           </a>

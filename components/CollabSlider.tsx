@@ -40,16 +40,17 @@ export default function CollabSlider() {
   }, []);
 
   return (
-    <section style={{ padding: "80px 40px", position: "relative", overflow: "hidden" }}>
-      <img src="/6829.jpg" alt="" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center", opacity: 0.3, zIndex: 0 }} />
-      <div style={{ position: "absolute", inset: 0, backgroundColor: "rgba(0,0,0,0.90)", zIndex: 1 }} />
-      <div style={{ maxWidth: "1600px", margin: "0 auto", position: "relative", zIndex: 2 }}>
+    <section className="relative overflow-hidden py-16 px-10">
+      <img src="/6829.jpg" alt="" className="absolute inset-0 w-full h-full object-cover object-center" style={{ opacity: 0.3, zIndex: 0 }} />
+      <div className="absolute inset-0" style={{ backgroundColor: "rgba(0,0,0,0.90)", zIndex: 1 }} />
+
+      <div className="relative mx-auto" style={{ zIndex: 2, maxWidth: "1600px" }}>
         <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16">
 
           {/* Left — image slider */}
-          <div style={{ flex: "0 0 auto", width: "100%", maxWidth: "480px" }}>
+          <div className="w-full shrink-0" style={{ maxWidth: "480px" }}>
             <div style={{ border: "2px solid #D85A30", borderRadius: "16px", padding: "10px" }}>
-              <div style={{ position: "relative", aspectRatio: "1/1", borderRadius: "10px", overflow: "hidden" }}>
+              <div className="relative rounded-[10px] overflow-hidden" style={{ aspectRatio: "1/1" }}>
                 <Image
                   key={current}
                   src={slides[current].image}
@@ -63,59 +64,50 @@ export default function CollabSlider() {
             </div>
 
             {/* Dot navigation */}
-            <div style={{ display: "flex", justifyContent: "center", gap: "8px", marginTop: "20px", flexWrap: "wrap" }}>
+            <div className="flex justify-center flex-wrap gap-2 mt-4">
               {slides.map((_, i) => (
                 <button
                   key={i}
                   onClick={() => setCurrent(i)}
-                  style={{
-                    width: "10px",
-                    height: "10px",
-                    borderRadius: "50%",
-                    border: "none",
-                    cursor: "pointer",
-                    backgroundColor: i === current ? "#D85A30" : "rgba(255,255,255,0.3)",
-                    padding: 0,
-                    transition: "background-color 0.2s",
-                  }}
                   aria-label={`Slide ${i + 1}`}
+                  className="w-2.5 h-2.5 rounded-full border-none cursor-pointer p-0 transition-colors duration-200"
+                  style={{ backgroundColor: i === current ? "#D85A30" : "rgba(255,255,255,0.3)" }}
                 />
               ))}
             </div>
           </div>
 
           {/* Right — content */}
-          <div style={{ flex: 1 }}>
-            {/* Collab line */}
-            <div style={{ marginBottom: "16px" }}>
+          <div className="flex flex-col gap-6 flex-1">
+
+            <div>
               <Image src="/slwly/MDSW 1.png" alt="MuscleDepot x Slowly" width={160} height={40} style={{ width: "160px", height: "auto", objectFit: "contain" }} />
             </div>
 
-            {/* Heading */}
-            <h2 style={{ ...drukText, textTransform: "uppercase", lineHeight: 1.05, margin: "0 0 20px" }}>
-              <span style={{ display: "block", fontSize: "clamp(40px, 6vw, 80px)", color: "transparent", WebkitTextStroke: "2px #D85A30" }}>
+            <h2 className="uppercase leading-tight" style={{ ...drukText, lineHeight: 1.05 }}>
+              <span className="block" style={{ fontSize: "clamp(40px, 6vw, 80px)", color: "transparent", WebkitTextStroke: "2px #D85A30" }}>
                 STRENGTH
               </span>
-              <span style={{ display: "block", fontSize: "clamp(40px, 6vw, 80px)", color: "#fff" }}>
+              <span className="block" style={{ fontSize: "clamp(40px, 6vw, 80px)", color: "#fff" }}>
                 YOU CAN WEAR
               </span>
             </h2>
 
-            {/* Description */}
-            <p style={{ color: "rgba(255,255,255,0.7)", fontSize: "16px", lineHeight: 1.75, maxWidth: "520px", marginBottom: "32px" }}>
+            <p className="leading-relaxed" style={{ color: "rgba(255,255,255,0.7)", fontSize: "16px", maxWidth: "520px" }}>
               The First Collaboration Between <strong style={{ color: "#fff" }}>Muscle Depot And Slowly But Surely</strong> Is Finally Here. Built For Those Who Show Up, Put In The Work, And Trust The Process — Slowly But Surely.
             </p>
 
-            {/* CTA */}
-            <a
-              href="#"
-              className="btn-glow"
-              style={{ ...drukText, display: "inline-block", backgroundColor: "#D85A30", color: "#fff", padding: "14px 36px", fontSize: "16px", textTransform: "uppercase", letterSpacing: "0.1em", borderRadius: "4px", textDecoration: "none" }}
-            >
-              BUY ONE NOW
-            </a>
-          </div>
+            <div>
+              <a
+                href="#"
+                className="btn-glow inline-block"
+                style={{ ...drukText, backgroundColor: "#D85A30", color: "#fff", padding: "12px 32px", fontSize: "16px", textTransform: "uppercase", letterSpacing: "0.1em", borderRadius: "4px", textDecoration: "none" }}
+              >
+                BUY ONE NOW
+              </a>
+            </div>
 
+          </div>
         </div>
       </div>
     </section>
