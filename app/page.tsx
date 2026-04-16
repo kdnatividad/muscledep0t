@@ -4,6 +4,7 @@ import MarqueeBanner from "@/components/MarqueeBanner";
 import Services from "@/components/Services";
 import About from "@/components/About";
 import Trainers from "@/components/Trainers";
+import CollabSlider from "@/components/CollabSlider";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
       <MarqueeBanner />
       <About />
       <Trainers />
+      <CollabSlider />
       <Footer />
     </>
   );
