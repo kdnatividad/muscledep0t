@@ -13,9 +13,9 @@ function MarqueeItem() {
   return (
     <span style={{ display: "inline-flex", alignItems: "center", gap: "2rem", paddingRight: "2rem" }}>
       <span style={textStyle}>MUSCLE DEPOT.</span>
-      <img src="/md-white.png" alt="" style={{ height: "clamp(20px, 3vw, 44px)", width: "auto", display: "inline-block" }} />
+      <img src="/md-white.png" alt="" style={{ height: "36px", width: "36px", objectFit: "contain", flexShrink: 0 }} />
       <span style={textStyle}>BE THE BEST VERSION YOU COULD EVER BE</span>
-      <img src="/md-white.png" alt="" style={{ height: "clamp(20px, 3vw, 44px)", width: "auto", display: "inline-block" }} />
+      <img src="/md-white.png" alt="" style={{ height: "36px", width: "36px", objectFit: "contain", flexShrink: 0 }} />
     </span>
   );
 }

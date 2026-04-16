@@ -4,6 +4,7 @@ import MarqueeBanner from "@/components/MarqueeBanner";
 import Services from "@/components/Services";
 import About from "@/components/About";
 import Trainers from "@/components/Trainers";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <MarqueeBanner />
       <About />
       <Trainers />
+      <Footer />
     </>
   );
 }
