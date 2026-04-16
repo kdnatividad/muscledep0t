@@ -22,6 +22,9 @@ const drukText = localFont({
 export const metadata: Metadata = {
   title: "MuscleDepot",
   description: "Your local training ground for real progress.",
+  icons: {
+    icon: "/md-orange.png",
+  },
 };
 
 export default function RootLayout({

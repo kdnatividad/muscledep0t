@@ -1,0 +1,129 @@
+"use client";
+
+import Image from "next/image";
+
+const drukText: React.CSSProperties = {
+  fontFamily: "var(--font-druktext), sans-serif",
+  fontWeight: 500,
+};
+
+const trainers = [
+  {
+    image: "/coach-josh.jpg",
+    name: "COACH JOSH",
+    description:
+      "FOCUSED ON SIZE, STRENGTH, AND STAGE-LEVEL CONDITIONING. COACH JOSH BRINGS REAL BODYBUILDING EXPERIENCE AND NO-BS TRAINING TO HELP YOU PUSH PAST LIMITS.",
+  },
+  {
+    image: "/coach-boodz.jpg",
+    name: "COACH BOODZ",
+    description:
+      "COMPETITIVE ATHLETE AND DEDICATED COACH WHO TRAINS YOU TO PERFORM AT YOUR BEST. DISCIPLINED, TECHNICAL, AND RESULTS-DRIVEN.",
+  },
+];
+
+function TrainerCard({ trainer }: { trainer: typeof trainers[0] }) {
+  return (
+    <div
+      className="group relative rounded-lg overflow-hidden cursor-pointer transition-all duration-300"
+      style={{ aspectRatio: "3/4", border: "2px solid transparent" }}
+      onMouseEnter={(e) => (e.currentTarget.style.borderColor = "#D85A30")}
+      onMouseLeave={(e) => (e.currentTarget.style.borderColor = "transparent")}
+    >
+      <Image
+        src={trainer.image}
+        alt={trainer.name}
+        fill
+        className="object-cover object-center transition-transform duration-300 group-hover:scale-105"
+      />
+
+      {/* Default gradient */}
+      <div
+        className="absolute inset-0 transition-opacity duration-300 group-hover:opacity-0"
+        style={{ background: "linear-gradient(to bottom, rgba(0,0,0,0.05) 40%, rgba(0,0,0,0.75) 100%)" }}
+      />
+
+      {/* Hover overlay */}
+      <div
+        className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+        style={{ backgroundColor: "rgba(0,0,0,0.72)" }}
+      />
+
+      {/* Default name — bottom */}
+      <div
+        className="absolute bottom-0 left-0 right-0 px-5 pb-5 group-hover:opacity-0 transition-opacity duration-300"
+        style={{ zIndex: 2 }}
+      >
+        <p style={{ ...drukText, color: "#fff", fontSize: "20px", textTransform: "uppercase" }}>
+          {trainer.name}
+        </p>
+      </div>
+
+      {/* Hover content — bottom-left */}
+      <div
+        className="absolute inset-0 flex flex-col justify-end px-5 pb-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+        style={{ zIndex: 3 }}
+      >
+<p style={{ ...drukText, color: "#fff", fontSize: "26px", textTransform: "uppercase", lineHeight: 1.1, marginBottom: "10px" }}>
+          {trainer.name}
+        </p>
+        <p style={{ color: "rgba(255,255,255,0.8)", fontSize: "11px", lineHeight: 1.6, textTransform: "uppercase", letterSpacing: "0.03em", marginBottom: "14px" }}>
+          {trainer.description}
+        </p>
+        <a
+          href="#"
+          style={{ ...drukText, display: "inline-block", backgroundColor: "#D85A30", color: "#fff", padding: "10px 24px", fontSize: "12px", textTransform: "uppercase", letterSpacing: "0.1em", borderRadius: "4px", textDecoration: "none" }}
+        >
+          HIRE COACH
+        </a>
+      </div>
+    </div>
+  );
+}
+
+function PlaceholderCard() {
+  return (
+    <div
+      className="group relative rounded-lg overflow-hidden cursor-pointer transition-all duration-300 flex flex-col items-center justify-center"
+      style={{ aspectRatio: "3/4", backgroundColor: "#D85A30", border: "2px solid transparent" }}
+      onMouseEnter={(e) => (e.currentTarget.style.borderColor = "#fff")}
+      onMouseLeave={(e) => (e.currentTarget.style.borderColor = "transparent")}
+    >
+      <Image src="/md-white.png" alt="MuscleDepot" width={100} height={100} style={{ objectFit: "contain", marginBottom: "16px" }} />
+      <p style={{ ...drukText, color: "#fff", fontSize: "20px", textTransform: "uppercase" }}>
+        COACH SAMPLE
+      </p>
+    </div>
+  );
+}
+
+export default function Trainers() {
+  return (
+    <section
+      style={{ backgroundColor: "#0a0a0a" }}
+      className="py-20 px-6 md:px-16"
+    >
+      <div style={{ maxWidth: "1600px", margin: "0 auto" }}>
+
+        {/* Header */}
+        <div className="flex items-center gap-6 mb-10">
+          <h2
+            style={{ ...drukText, fontSize: "clamp(32px, 5vw, 64px)", textTransform: "uppercase", whiteSpace: "nowrap", lineHeight: 1 }}
+          >
+            <span style={{ color: "#fff" }}>OUR PERSONAL </span>
+            <span style={{ color: "#D85A30" }}>TRAINERS</span>
+          </h2>
+          <div style={{ flex: 1, height: "2px", backgroundColor: "#D85A30" }} />
+        </div>
+
+        {/* Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          {trainers.map((trainer) => (
+            <TrainerCard key={trainer.name} trainer={trainer} />
+          ))}
+          <PlaceholderCard />
+        </div>
+      </div>
+    </section>
+  );
+}
