@@ -61,7 +61,7 @@ export default function Services() {
         </p>
         <h2
           className="uppercase leading-tight"
-          style={{ ...drukText, fontSize: "70px" }}
+          style={{ ...drukText, fontSize: "clamp(28px, 5.5vw, 70px)" }}
         >
           <span className="block text-white">EVERYTHING YOU NEED TO</span>
           <span
