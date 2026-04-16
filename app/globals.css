@@ -1,11 +1,5 @@
 @import "tailwindcss";
 
-@font-face {
-  font-family: 'DrukText';
-  src: url('/fonts/DrukText-Medium-Trial.otf') format('opentype');
-  font-weight: 500;
-  font-style: normal;
-}
 
 :root {
   --background: #ffffff;

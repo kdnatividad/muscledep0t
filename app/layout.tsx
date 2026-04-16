@@ -13,10 +13,10 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const drukWide = localFont({
-  src: "../public/FontsFree-Net-Druk-Wide-Bold.ttf",
-  variable: "--font-druk",
-  weight: "700",
+const drukText = localFont({
+  src: "../public/fonts/DrukWide-Medium-Trial.otf",
+  variable: "--font-druktext",
+  weight: "500",
 });
 
 export const metadata: Metadata = {
@@ -32,7 +32,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${drukWide.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${drukText.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
