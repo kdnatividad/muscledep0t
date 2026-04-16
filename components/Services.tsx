@@ -50,7 +50,7 @@ export default function Services() {
       {/* Dark overlay */}
       <div style={{ position: "absolute", inset: 0, backgroundColor: "rgba(0,0,0,0.92)", zIndex: 1 }} />
       {/* Content wrapper */}
-      <div style={{ position: "relative", zIndex: 2 }}>
+      <div style={{ position: "relative", zIndex: 2, maxWidth: "1600px", margin: "0 auto" }}>
       {/* Header */}
       <div className="text-center mb-12">
         <p

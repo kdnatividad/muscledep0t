@@ -11,10 +11,10 @@ export default function About() {
       style={{ backgroundColor: "#0a0a0a" }}
       className="py-20 px-6 md:px-16"
     >
-      <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16 max-w-7xl mx-auto">
+      <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16 mx-auto" style={{ maxWidth: "1600px" }}>
 
         {/* Left — image */}
-        <div className="w-full md:w-1/2 flex-shrink-0">
+        <div className="w-full md:w-1/2 shrink-0">
           <div style={{ position: "relative", width: "100%", aspectRatio: "4/3", borderRadius: "8px", overflow: "hidden" }}>
             <Image
               src="/about.jpg"

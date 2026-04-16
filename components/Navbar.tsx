@@ -16,7 +16,8 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-8 py-3 md:py-4 bg-black/50 backdrop-blur-sm">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-black/50 backdrop-blur-sm py-3 md:py-4">
+      <div className="flex items-center justify-between px-6 md:px-8">
         {/* Logo */}
         <div className="flex items-center">
           <Image
@@ -95,6 +96,7 @@ export default function Navbar() {
             {open ? <LucideX size={24} /> : <LucideMenu size={24} />}
           </button>
         </div>
+      </div>
       </nav>
 
       {/* Mobile dropdown menu */}

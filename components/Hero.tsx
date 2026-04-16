@@ -50,6 +50,9 @@ export default function Hero() {
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
+          maxWidth: "1600px",
+          margin: "0 auto",
+          width: "100%",
           textAlign: "center",
           padding: "0 24px",
         }}
