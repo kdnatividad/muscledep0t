@@ -48,7 +48,9 @@ export default function Navbar() {
         <div className="flex items-center gap-3">
           {/* Social icons — always visible */}
           <a
-            href="#"
+            href="https://www.tiktok.com/@muscledep0t"
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center justify-center w-9 h-9 md:w-10 md:h-10 rounded-lg bg-[#D85A30] hover:bg-orange-700 transition-colors"
             aria-label="TikTok"
           >
@@ -61,7 +63,9 @@ export default function Navbar() {
             />
           </a>
           <a
-            href="#"
+            href="https://www.instagram.com/muscledep0t/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center justify-center w-9 h-9 md:w-10 md:h-10 rounded-lg bg-[#D85A30] hover:bg-orange-700 transition-colors"
             aria-label="Instagram"
           >
@@ -74,7 +78,9 @@ export default function Navbar() {
             />
           </a>
           <a
-            href="#"
+            href="https://www.facebook.com/muscledep0t"
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center justify-center w-9 h-9 md:w-10 md:h-10 rounded-lg bg-[#D85A30] hover:bg-orange-700 transition-colors"
             aria-label="Facebook"
           >

@@ -8,7 +8,7 @@ const drukText: React.CSSProperties = {
 export default function About() {
   return (
     <section
-      style={{ backgroundColor: "#0a0a0a" }}
+      style={{ backgroundColor: "#000000" }}
       className="py-20 px-6 md:px-16"
     >
       <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16 mx-auto" style={{ maxWidth: "1600px" }}>
@@ -56,6 +56,7 @@ export default function About() {
           <div>
             <a
               href="#"
+              className="btn-glow"
               style={{
                 ...drukText,
                 display: "inline-block",

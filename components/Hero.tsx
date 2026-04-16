@@ -94,6 +94,7 @@ export default function Hero() {
         >
           <a
             href="#"
+            className="btn-glow"
             style={{
               backgroundColor: "#D85A30",
               color: "#fff",

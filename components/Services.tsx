@@ -36,7 +36,7 @@ const drukText: React.CSSProperties = {
 export default function Services() {
   return (
     <section
-      style={{ backgroundColor: "#0a0a0a", position: "relative", overflow: "hidden" }}
+      style={{ backgroundColor: "#000000", position: "relative", overflow: "hidden" }}
       className="py-24 px-6 md:px-16"
     >
       {/* Section background image */}
@@ -83,12 +83,14 @@ export default function Services() {
             key={card.title}
             className="group relative rounded-lg overflow-hidden cursor-pointer transition-all duration-300"
             style={{ aspectRatio: "3/4", border: "2px solid transparent" }}
-            onMouseEnter={(e) =>
-              (e.currentTarget.style.borderColor = "#D85A30")
-            }
-            onMouseLeave={(e) =>
-              (e.currentTarget.style.borderColor = "transparent")
-            }
+            onMouseEnter={(e) => {
+              e.currentTarget.style.borderColor = "rgba(216,90,48,0.45)";
+              e.currentTarget.style.boxShadow = "0 0 20px 4px rgba(216,90,48,0.3)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.borderColor = "transparent";
+              e.currentTarget.style.boxShadow = "none";
+            }}
           >
             {/* Background image */}
             <Image

@@ -27,8 +27,14 @@ function TrainerCard({ trainer }: { trainer: typeof trainers[0] }) {
     <div
       className="group relative rounded-lg overflow-hidden cursor-pointer transition-all duration-300"
       style={{ aspectRatio: "3/4", border: "2px solid transparent" }}
-      onMouseEnter={(e) => (e.currentTarget.style.borderColor = "#D85A30")}
-      onMouseLeave={(e) => (e.currentTarget.style.borderColor = "transparent")}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.borderColor = "rgba(216,90,48,0.45)";
+        e.currentTarget.style.boxShadow = "0 0 20px 4px rgba(216,90,48,0.3)";
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.borderColor = "transparent";
+        e.currentTarget.style.boxShadow = "none";
+      }}
     >
       <Image
         src={trainer.image}
@@ -72,6 +78,7 @@ function TrainerCard({ trainer }: { trainer: typeof trainers[0] }) {
         </p>
         <a
           href="#"
+          className="btn-glow"
           style={{ ...drukText, display: "inline-block", backgroundColor: "#D85A30", color: "#fff", padding: "10px 24px", fontSize: "12px", textTransform: "uppercase", letterSpacing: "0.1em", borderRadius: "4px", textDecoration: "none" }}
         >
           HIRE COACH
@@ -86,8 +93,14 @@ function PlaceholderCard() {
     <div
       className="group relative rounded-lg overflow-hidden cursor-pointer transition-all duration-300 flex flex-col items-center justify-center"
       style={{ aspectRatio: "3/4", backgroundColor: "#D85A30", border: "2px solid transparent" }}
-      onMouseEnter={(e) => (e.currentTarget.style.borderColor = "#fff")}
-      onMouseLeave={(e) => (e.currentTarget.style.borderColor = "transparent")}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.borderColor = "rgba(216,90,48,0.45)";
+        e.currentTarget.style.boxShadow = "0 0 20px 4px rgba(216,90,48,0.3)";
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.borderColor = "transparent";
+        e.currentTarget.style.boxShadow = "none";
+      }}
     >
       <Image src="/md-white.png" alt="MuscleDepot" width={100} height={100} style={{ objectFit: "contain", marginBottom: "16px" }} />
       <p style={{ ...drukText, color: "#fff", fontSize: "20px", textTransform: "uppercase" }}>
@@ -100,7 +113,7 @@ function PlaceholderCard() {
 export default function Trainers() {
   return (
     <section
-      style={{ backgroundColor: "#0a0a0a" }}
+      style={{ backgroundColor: "#000000" }}
       className="py-20 px-6 md:px-16"
     >
       <div style={{ maxWidth: "1600px", margin: "0 auto" }}>
