@@ -1,5 +1,13 @@
 import Image from "next/image";
 
+const drukText: React.CSSProperties = {
+  fontFamily: "'DrukText', sans-serif",
+  fontSize: "80px",
+  fontWeight: 500,
+  textTransform: "uppercase",
+  lineHeight: 1.05,
+};
+
 export default function Hero() {
   return (
     <section className="relative h-screen">
@@ -10,16 +18,22 @@ export default function Hero() {
         className="object-cover object-center"
         priority
       />
-      <div className="absolute inset-0 bg-black/70" />
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.95))",
+        }}
+      />
 
       <div className="relative z-10 flex h-full flex-col items-center justify-center text-center px-4">
         <p className="text-xs uppercase tracking-[0.3em] text-white/40 mb-4">
           MUSCLEDEP0T
         </p>
 
-        <h1 className="font-black uppercase text-6xl md:text-7xl leading-tight text-white max-w-4xl [font-family:var(--font-druk)]">
+        <h1 style={drukText} className="text-white max-w-5xl">
           EVERYTHING STARTS FROM{" "}
-          <span className="text-[#D85A30]">ZERO</span>
+          <span style={{ color: "#D85A30" }}>ZERO</span>
         </h1>
 
         <p className="text-sm text-white/60 uppercase tracking-wide max-w-lg mt-4">
