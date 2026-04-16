@@ -33,8 +33,8 @@ export default function Hero() {
         style={{ zIndex: 2, maxWidth: "1600px" }}
       >
         <h1
-          className="uppercase mb-6"
-          style={{ ...drukText, fontSize: "clamp(40px, 6vw, 80px)", color: "#fff", lineHeight: 1.1 }}
+          className="uppercase mb-4 md:mb-6"
+          style={{ ...drukText, fontSize: "clamp(28px, 8vw, 80px)", color: "#fff", lineHeight: 1.1 }}
         >
           EVERYTHING STARTS
           <br />
@@ -43,22 +43,23 @@ export default function Hero() {
 
         <p
           className="mb-8 leading-relaxed"
-          style={{ color: "rgba(255,255,255,0.6)", fontSize: "18px", letterSpacing: "0.1em", textTransform: "uppercase", maxWidth: "520px" }}
+          style={{ color: "rgba(255,255,255,0.6)", fontSize: "clamp(14px, 3.5vw, 18px)", letterSpacing: "0.08em", textTransform: "uppercase", maxWidth: "520px" }}
         >
           WELCOME TO MUSCLEDEP0T — YOUR LOCAL TRAINING GROUND FOR REAL PROGRESS.
           NO SHORTCUTS. JUST HARD WORK, DISCIPLINE, AND CONSISTENCY.
         </p>
 
-        <div className="flex flex-wrap justify-center gap-4">
+        <div className="flex flex-row justify-center gap-3 w-full max-w-sm sm:max-w-none">
           <a
             href="#"
-            className="btn-glow"
+            className="btn-glow flex-1 sm:flex-none text-center"
             style={{ ...btnBase, backgroundColor: "#D85A30", color: "#fff", padding: "12px 32px" }}
           >
             JOIN US NOW
           </a>
           <a
             href="#"
+            className="flex-1 sm:flex-none text-center"
             style={{ ...btnBase, backgroundColor: "transparent", color: "#fff", padding: "12px 32px", border: "1px solid #fff" }}
           >
             CONTACT US

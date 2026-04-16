@@ -54,13 +54,25 @@ export default function Services() {
                 fill
                 className="object-cover object-center transition-transform duration-300 group-hover:scale-105"
               />
+
+              {/* Always-visible bottom gradient + title (mobile default, fades on desktop hover) */}
+              <div
+                className="absolute inset-x-0 bottom-0 transition-opacity duration-300 group-hover:opacity-0"
+                style={{ zIndex: 1, background: "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.85) 100%)", paddingTop: "60px" }}
+              >
+                <p className="text-white uppercase tracking-wide text-center px-4 pb-5" style={{ ...drukText, fontSize: "16px" }}>
+                  {card.title}
+                </p>
+              </div>
+
+              {/* Hover overlay (desktop) */}
               <div
                 className="absolute inset-0 opacity-0 transition-all duration-300 group-hover:opacity-100"
-                style={{ backgroundColor: "rgba(0,0,0,0.65)", zIndex: 1 }}
+                style={{ backgroundColor: "rgba(0,0,0,0.65)", zIndex: 2 }}
               />
               <div
                 className="absolute inset-0 flex flex-col items-center justify-center gap-3 px-6 opacity-0 group-hover:opacity-100 transition-all duration-300"
-                style={{ zIndex: 2 }}
+                style={{ zIndex: 3 }}
               >
                 <img src={card.icon} alt={card.alt} width={120} height={120} style={{ filter: "brightness(0) invert(1)" }} />
                 <p className="text-white uppercase tracking-wide text-center" style={{ ...drukText, fontSize: "16px" }}>
