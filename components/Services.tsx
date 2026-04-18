@@ -15,7 +15,7 @@ const drukText: React.CSSProperties = {
 
 export default function Services() {
   return (
-    <section className="relative overflow-hidden py-16 px-6 md:px-16">
+    <section className="relative overflow-x-hidden overflow-hidden py-16 px-6 md:px-16 w-full">
       <img src="/6829.jpg" alt="" className="absolute inset-0 w-full h-full object-cover object-center" style={{ opacity: 0.3, zIndex: 0 }} />
       <div className="absolute inset-0" style={{ backgroundColor: "rgba(0,0,0,0.85)", zIndex: 1 }} />
 
@@ -33,12 +33,12 @@ export default function Services() {
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full xl:max-w-350 xl:mx-auto">
           {cards.map((card) => (
             <div
               key={card.title}
-              className="group relative rounded-lg overflow-hidden cursor-pointer transition-all duration-300"
-              style={{ aspectRatio: "3/4", border: "2px solid transparent" }}
+              className="group relative rounded-lg overflow-hidden cursor-pointer transition-all duration-300 h-100 sm:h-112.5 lg:h-130"
+              style={{ border: "2px solid transparent" }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.borderColor = "rgba(216,90,48,0.45)";
                 e.currentTarget.style.boxShadow = "0 0 20px 4px rgba(216,90,48,0.3)";

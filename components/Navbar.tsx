@@ -16,7 +16,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-black/50 backdrop-blur-sm py-3 md:py-4">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-black/50 backdrop-blur-sm py-3 md:py-4 overflow-x-hidden">
       <div className="flex items-center justify-between px-6 md:px-8 mx-auto w-full" style={{ maxWidth: "1600px" }}>
         {/* Logo */}
         <div className="flex items-center">
