@@ -112,13 +112,13 @@ export default function Trainers() {
         {/* Header */}
         <div className="flex items-center gap-6 mb-8">
           <h2
-            className="uppercase leading-tight whitespace-nowrap"
-            style={{ ...drukText, fontSize: "clamp(32px, 5vw, 64px)", lineHeight: 1 }}
+            className="uppercase leading-tight shrink-0"
+            style={{ ...drukText, fontSize: "clamp(24px, 5vw, 64px)", lineHeight: 1 }}
           >
             <span style={{ color: "#fff" }}>OUR PERSONAL </span>
             <span style={{ color: "#D85A30" }}>TRAINERS</span>
           </h2>
-          <div className="flex-1 h-0.5" style={{ backgroundColor: "#D85A30" }} />
+          <div className="flex-1 h-0.5 hidden sm:block" style={{ backgroundColor: "#D85A30" }} />
         </div>
 
         {/* Cards */}
