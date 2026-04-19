@@ -1,59 +1,89 @@
-# MUSCLEDEP0T
+# MUSCLEDEP0T 💪
 
-> **Everything Starts From Zero.**
-
-Official website for **MuscleDepot** — your local training ground for real progress. No shortcuts. Just hard work, discipline, and consistency.
-
----
-
-## Stack
-
-- **Framework** — Next.js 16 (App Router)
-- **Styling** — Tailwind CSS v4
-- **Font** — Druk Wide / DrukText (local)
-- **Language** — TypeScript
+> **Everything starts from zero.**  
+> Your local training ground for real progress. No shortcuts. Just hard work, discipline, and consistency.
 
 ---
 
-## Sections
+## BUILT WITH
 
-| Section | Description |
-|---|---|
-| `Navbar` | Sticky nav with social links and mobile hamburger menu |
-| `Hero` | Full-screen video background with CTA |
-| `MarqueeBanner` | Scrolling orange ticker banner |
-| `Services` | 4-card services grid with hover effects |
-| `About` | Split layout about section |
-| `Trainers` | Coach cards with hover reveal |
-| `CollabSlider` | MuscleDepot × Slowly collab image slider |
-| `Footer` | Full footer with links, hours, map, and socials |
+| Tech                 | Purpose    |
+| -------------------- | ---------- |
+| Next.js (App Router) | Framework  |
+| TypeScript           | Language   |
+| Tailwind CSS         | Styling    |
+| Vercel               | Deployment |
 
 ---
 
-## Getting Started
+## GET STARTED
 
 ```bash
+# Clone the repo
+git clone https://github.com/kdnatividad/muscledep0t.git
+
+# Enter the project
+cd muscledep0t
+
+# Install dependencies
 npm install
+
+# Run locally
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to view the site.
+Open [http://localhost:3000](http://localhost:3000) and start training.
 
 ---
 
-## Socials
+## PROJECT STRUCTURE
 
-- Instagram — [@muscledep0t](https://www.instagram.com/muscledep0t/)
-- Facebook — [muscledep0t](https://www.facebook.com/muscledep0t)
-- TikTok — [@muscledep0t](https://www.tiktok.com/@muscledep0t)
+muscledep0t/
+├── app/
+│ ├── layout.tsx
+│ └── page.tsx
+├── components/
+│ ├── Navbar.tsx
+│ ├── Hero.tsx
+│ ├── Services.tsx
+│ ├── Trainers.tsx
+│ ├── About.tsx
+│ └── Store.tsx
+├── public/
+│ ├── fonts/
+│ ├── md-orange.png
+│ ├── headert.jpg
+│ └── muscledepot-hero.mp4
 
 ---
 
-## Location
+## ROADMAP
 
-Del Rosario St, Tuguegarao City, Cagayan
-**0917 160 6725** · muscledep0t.ph@gmail.com
+[x] Hero section
+[x] Services section
+[x] Built for Real Progress section
+[x] Personal Trainers section
+[x] Store / Merch section
+[ ] Memberships page
+[ ] Booking system
+[ ] Member portal
+[ ] Supabase auth + database
+[ ] Stripe payments
 
 ---
 
-*Built by Grit.*
+## DEPLOYMENT
+
+Deployed on **Vercel** — every push to `main` triggers an automatic deploy.
+
+Live: [muscledep0t.vercel.app](https://muscledep0t.vercel.app)
+
+---
+
+## LICENSE
+
+Private — Built by Grit. All rights reserved.
+
+---
+
+*We don't promise overnight results. We build habits that actually last.*Sonnet 4.6
