@@ -29,12 +29,12 @@ export default function Hero() {
       />
 
       <div
-        className="relative h-full flex flex-col items-center justify-center text-center px-6 mx-auto w-full"
-        style={{ zIndex: 2, maxWidth: "1600px" }}
+        className="relative h-full flex flex-col items-center justify-center text-center mx-auto w-full"
+        style={{ zIndex: 2, maxWidth: "1600px", padding: "0 24px" }}
       >
         <h1
           className="uppercase mb-4 md:mb-6"
-          style={{ ...drukText, fontSize: "clamp(28px, 8vw, 80px)", color: "#fff", lineHeight: 1.1 }}
+          style={{ ...drukText, fontSize: "clamp(32px, 5vw, 80px)", color: "#fff", lineHeight: 1.1 }}
         >
           EVERYTHING STARTS
           <br />
@@ -49,17 +49,17 @@ export default function Hero() {
           NO SHORTCUTS. JUST HARD WORK, DISCIPLINE, AND CONSISTENCY.
         </p>
 
-        <div className="flex flex-row justify-center gap-3 w-full px-2 sm:px-0 sm:w-auto">
+        <div className="flex flex-col md:flex-row justify-center gap-3 w-full md:w-auto">
           <a
             href="#"
-            className="btn-glow flex-1 sm:flex-none text-center px-6 py-3 sm:px-8"
+            className="btn-glow w-full md:w-auto text-center px-8 py-3"
             style={{ ...btnBase, backgroundColor: "#D85A30", color: "#fff" }}
           >
             JOIN US NOW
           </a>
           <a
             href="#"
-            className="flex-1 sm:flex-none text-center px-6 py-3 sm:px-8"
+            className="w-full md:w-auto text-center px-8 py-3"
             style={{ ...btnBase, backgroundColor: "transparent", color: "#fff", border: "1px solid #fff" }}
           >
             CONTACT US
