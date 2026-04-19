@@ -31,7 +31,7 @@ export default function Footer() {
 
       {/* Top — logo + tagline */}
       <div
-        className="flex items-center justify-between flex-wrap gap-4 px-10 py-10 mx-auto"
+        className="flex items-center justify-between flex-wrap gap-4 px-4 sm:px-8 md:px-12 lg:px-16 py-10 mx-auto"
         style={{ maxWidth: "1600px", borderBottom: "1px solid rgba(255,255,255,0.08)" }}
       >
         <Image src="/md-orange.png" alt="MuscleDepot" width={90} height={90} style={{ width: "90px", height: "auto" }} />
@@ -47,7 +47,7 @@ export default function Footer() {
       >
         {/* Link columns */}
         <div
-          className="flex-1 grid grid-cols-3 gap-8 p-10 border-b border-white/8 md:border-b-0 md:border-r md:border-white/8"
+          className="flex-1 grid grid-cols-1 sm:grid-cols-3 gap-8 px-4 sm:px-8 md:px-12 lg:px-16 py-10 border-b border-white/8 md:border-b-0 md:border-r md:border-white/8"
         >
           {linkCols.map(({ heading, links }) => (
             <div key={heading} className="flex flex-col gap-2">
@@ -139,7 +139,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div className="flex items-center justify-between flex-wrap gap-2 px-10 py-4" style={{ backgroundColor: "#111" }}>
+      <div className="flex flex-col sm:flex-row items-center justify-between flex-wrap gap-2 px-4 sm:px-8 md:px-12 lg:px-16 py-4 text-center sm:text-left" style={{ backgroundColor: "#111" }}>
         <div className="flex items-center flex-wrap gap-4">
           <span style={{ ...drukText, color: "rgba(255,255,255,0.4)", fontSize: "11px", letterSpacing: "0.1em" }}>
             © {new Date().getFullYear()}

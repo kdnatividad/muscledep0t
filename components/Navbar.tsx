@@ -30,7 +30,7 @@ export default function Navbar() {
         </div>
 
         {/* Desktop nav links */}
-        <ul className="hidden md:flex items-center gap-8">
+        <ul className="hidden lg:flex items-center gap-8">
           {navLinks.map((link) => (
             <li key={link}>
               <a
@@ -93,9 +93,9 @@ export default function Navbar() {
             />
           </a>
 
-          {/* Hamburger — mobile only */}
+          {/* Hamburger — mobile + md */}
           <button
-            className="md:hidden text-white ml-1"
+            className="lg:hidden text-white ml-1"
             onClick={() => setOpen((v) => !v)}
             aria-label="Toggle menu"
           >

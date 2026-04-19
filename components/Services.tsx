@@ -15,7 +15,7 @@ const drukText: React.CSSProperties = {
 
 export default function Services() {
   return (
-    <section className="relative overflow-hidden py-16 px-4 md:px-16 w-full" style={{ maxWidth: "100vw" }}>
+    <section className="relative overflow-hidden py-16 px-4 sm:px-8 md:px-12 lg:px-16 w-full" style={{ maxWidth: "100vw" }}>
       <img src="/6829.jpg" alt="" className="absolute inset-0 w-full h-full object-cover object-center" style={{ opacity: 0.3, zIndex: 0 }} />
       <div className="absolute inset-0" style={{ backgroundColor: "rgba(0,0,0,0.85)", zIndex: 1 }} />
 

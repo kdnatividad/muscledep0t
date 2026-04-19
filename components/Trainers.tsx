@@ -168,7 +168,7 @@ export default function Trainers() {
   return (
     <section
       style={{ backgroundColor: "#000000" }}
-      className="py-16 px-6 md:px-16"
+      className="py-16 px-4 sm:px-8 md:px-12 lg:px-16 overflow-hidden"
     >
       <div style={{ maxWidth: "1600px", margin: "0 auto" }}>
         {/* Eyebrow — always visible */}
